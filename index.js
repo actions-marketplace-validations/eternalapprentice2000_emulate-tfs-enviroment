@@ -9,22 +9,22 @@ function setWorkingDir(){
 
     log("Setting working directory")
 
-    let currentWorkSpace = process.env.GITHUB_WORKSPACE.
+    var currentWorkSpace = process.env.GITHUB_WORKSPACE
     log("Current working directory: " + currentWorkSpace)
 
     // original : {{working dir}}/{{repoName}}/{{repoName}}
     // new      : {{working dir}}/{{short-repo-name}}
 
-    let repoName = currentWorkSpace.split('\\').pop().split('/').pop()
+    var repoName = currentWorkSpace.split('\\').pop().split('/').pop()
     log("repo name: " + repoName)
 
-    let shortenedRepoName = repoName.split('.').pop()
+    var shortenedRepoName = repoName.split('.').pop()
     log("shortened repo name: " + shortenedRepoName)
 
-    let workDir = currentWorkSpace.substring(0, currentWorkSpace.indexOf(repoName))
+    var workDir = currentWorkSpace.substring(0, currentWorkSpace.indexOf(repoName))
     log("actual working dir: " + workDir)
 
-    let newWorkSpace = workDir + shortenedRepoName
+    var newWorkSpace = workDir + shortenedRepoName
 
     log("New working dir: " + newWorkSpace)
     
