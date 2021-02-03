@@ -1,0 +1,5 @@
+name: emulate-tfs-environment
+description: "Helps emulate a standard TfS environment from github"
+runs:
+  using: "node12"
+  main: "index.js"
