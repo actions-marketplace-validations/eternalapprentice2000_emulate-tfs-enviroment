@@ -28,9 +28,8 @@ function setWorkingDir(){
 
     log("New working dir: " + newWorkSpace)
     
-    process.env.GITHUB_WORKSPACE = newWorkSpace
+    process.env.LOCAL_WORKSPACE = newWorkSpace
     log("Workspace setting complete")
-
 }
 
 // do the things
