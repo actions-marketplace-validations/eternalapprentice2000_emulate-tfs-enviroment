@@ -1,4 +1,4 @@
-// const core = require('@actions/core');
+const core = require('@actions/core');
 // const github = require('@actions/github');
 
 function log(str){
@@ -28,8 +28,9 @@ function setWorkingDir(){
 
     log("New working dir: " + newWorkSpace)
     
-    process.env.LOCAL_WORKSPACE = newWorkSpace
     log("Workspace setting complete")
+
+    core.setOutput("LOCAL_WORKING_DIR", newWorkSpace)
 }
 
 // do the things

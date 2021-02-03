@@ -1,5 +1,8 @@
 name: emulate-tfs-environment
 description: "Helps emulate a standard TfS environment from github"
+outputs:
+  LOCAL_WORKING_DIR: 
+    description: "the local directory we want to run the workflows in"
 runs:
   using: "node12"
   main: "index.js"
